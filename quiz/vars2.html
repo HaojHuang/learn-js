@@ -2,12 +2,14 @@
     <head>
         <script>
             // change the script such that i=0,1,2,3,4 is logged in the console
-            for (var i = 0; i < 5; i++) {
-                // setTimeout executes the function after 5 ms
+            for (let i = 0; i < 5; i++) {
+                // setTimeout executes the function after 3 ms
                 setTimeout(function() {
                     console.log(i);
-                }, 5);
+                }, 3);
             }
+            // there is a main thread and a setTimeout thread, the setTimeout thread could read each
+            // i in the block after each update, but if it is updating i is blocked until releasing.
         </script>
     </head>
     <body>
