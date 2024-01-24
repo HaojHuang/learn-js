@@ -3,8 +3,8 @@ function makeFunc() {
     function dispName() {
         console.log(name);
     }
-    return dispName;
+    return dispName; //return a function with its bindings
 }
 
 const f = makeFunc();
-f();
+f(); // f contains its function and the bindings and we can execute it here

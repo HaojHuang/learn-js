@@ -1,4 +1,4 @@
-function foo(sum, x, y) {
+function foo(sum, x, y) {// function itself can be passed
  return sum(x,y);
 }
 

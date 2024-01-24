@@ -10,16 +10,19 @@
         <p id="demo"> DEMO </p>
     </div>
     <script>
+    window.msg = 'hello world'
         const obj = {
             msg: 'Hello World',
-            hello:  function() {
+            hello:  ()=> { // we can change this line as: function() {}
                 document.getElementById('demo').innerHTML += this.msg;
             }
         };
         window.addEventListener('load', function() {
+            alert(this);
             obj.hello();
         });
-        document.getElementById('btn').addEventListener('click', function() {
+        document.getElementById('btn').addEventListener('click', () => {
+            alert(this) // if we use arrow function here, this refer to the windon, if we use regular function here this refer to the button function, be clear about the this when using arrow function
             obj.hello();
         });
     </script>
