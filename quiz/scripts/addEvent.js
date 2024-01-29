@@ -6,13 +6,16 @@ window.onload = function() {
 }
 
 function myFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () => document.getElementById('demo').textContent = msg;
+
 }
 
 function mySecondFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () => document.getElementById('demo').textContent = msg;
 }
 
 function myThirdFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () => document.getElementById('demo').textContent = msg; // a function that requires msg
 }
+
+// return a function that need to be called when the event happened instead of return a no-use value
