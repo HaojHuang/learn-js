@@ -10,6 +10,7 @@ const originalArray = [
     // Creating a new object with the same properties
     // return { id: item.id, name: item.name.toUpperCase(), age: item.age };
     // spread syntax creates a shallow copy
+    // short syntax: keep everything the same except ..
     return { ...item, name: item.name.toUpperCase() };
   });
   
